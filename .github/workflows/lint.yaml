@@ -1,0 +1,17 @@
+name: lint-proto
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: read
+  checks: write
+
+jobs:
+  lint-protos:
+    # Run `git checkout
+    - uses: actions/checkout@v4
+    # Install the `buf` CLI
+    - uses: bufbuild/buf-setup-action@v1
+    # Lint your Protobuf sources
+    - uses: bufbuild/buf-lint-action@v1
