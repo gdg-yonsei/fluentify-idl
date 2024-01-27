@@ -1,45 +1,52 @@
 syntax = "proto3";
-package fluentify;
 
-message CreateUserRequest {
-    string name = 1; 
-    int age = 2;
-    string disorderType = 3;
+package proto;
+option go_package = "github.com/gdsc-ys/fluentify-idl/proto";
+
+message UserDTO {
+    string id = 1;
+    string name = 2; 
+    int32 age = 3;
+    DisorderType disorder_type = 4;
 }
 
-message CreateUserResponse {
-    int id = 1;
+enum DisorderType {
+    DISORDER_TYPE_UNSPECIFIED = 0;
 }
+
+// message CreateUserRequest {
+//     string name = 1; 
+//     int age = 2;
+//     string disorderType = 3;
+// }
+
+// message CreateUserResponse {
+//     int id = 1;
+// }
 
 message GetUserRequest {
-    int id = 1;
+    string id = 1;
 }
 
 message GetUserResponse {
-    int32 id = 1;
-    string name = 2; 
-    int32 age = 3;
-    string disorderType = 4;
+    UserDTO user = 1;
 }
 
 message UpdateUserRequest {
-    int32 id = 1;
-    string name = 2; 
-    int32 age = 3;
-    string disorderType = 4;
+    string id = 1;
+    optional string name = 2; 
+    optional int32 age = 3;
+    DisorderType disorder_type = 4;
 }
 
 message UpdateUserResponse {
-    int32 id = 1;
-    string name = 2;
-    int32 age = 3;
-    string disorderType = 4;
+    UserDTO user = 1;
 }
 
 message DeleteUserRequest {
-    int32 id = 1;
+    string id = 1;
 }
 
 message DeleteUserResponse {
-    int32 id = 1;
+    string id = 1;
 }
