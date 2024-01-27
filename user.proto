@@ -1,0 +1,45 @@
+syntax = "proto3";
+package fluentify;
+
+message CreateUserRequest {
+    string name = 1; 
+    int age = 2;
+    string disorderType = 3;
+}
+
+message CreateUserResponse {
+    int id = 1;
+}
+
+message GetUserRequest {
+    int id = 1;
+}
+
+message GetUserResponse {
+    int32 id = 1;
+    string name = 2; 
+    int32 age = 3;
+    string disorderType = 4;
+}
+
+message UpdateUserRequest {
+    int32 id = 1;
+    string name = 2; 
+    int32 age = 3;
+    string disorderType = 4;
+}
+
+message UpdateUserResponse {
+    int32 id = 1;
+    string name = 2;
+    int32 age = 3;
+    string disorderType = 4;
+}
+
+message DeleteUserRequest {
+    int32 id = 1;
+}
+
+message DeleteUserResponse {
+    int32 id = 1;
+}
