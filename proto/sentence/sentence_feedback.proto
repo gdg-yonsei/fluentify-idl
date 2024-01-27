@@ -1,0 +1,19 @@
+syntax = "proto3";
+package sentence;
+
+option go_package = "proto/sentence/sentence_feedback";
+
+message GetSentenceFeedbackRequest {
+    //sentence id
+    int32 id = 1;
+    bytes record = 2;
+}
+
+message GetSentenceFeedbackResponse {
+    int32 id = 1;
+    int32 pronounciationScore = 2;
+    int32 speedScore = 3;
+    int32 volumeScore = 4;
+    string feedbackText = 5;
+    bytes feedbackAudio = 6; 
+}

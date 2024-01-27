@@ -1,0 +1,13 @@
+syntax = "proto3";
+package sentence;
+
+option go_package = "proto/sentence/sentence";
+
+message GetSentenceRequest {
+    int32 id = 1;
+}
+
+message GetSentenceResponse {
+    int32 id = 1;
+    string text = 2;
+}

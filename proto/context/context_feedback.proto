@@ -1,0 +1,17 @@
+syntax = "proto3";
+package context;
+
+option go_package = "proto/context/context_feedback";
+
+message GetContextFeedbackRequest {
+    //context id
+    int32 id = 1;
+    bytes record = 2;
+}
+
+message GetContextFeedbackResponse {
+    //context id
+    int32 id = 1;
+    string feedbackText = 2;
+    bytes feedbackAudio = 3;
+}

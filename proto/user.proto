@@ -1,18 +1,20 @@
 syntax = "proto3";
-package fluentify;
+package proto;
+
+option go_package = "proto/user";
 
 message CreateUserRequest {
     string name = 1; 
-    int age = 2;
+    int32 age = 2;
     string disorderType = 3;
 }
 
 message CreateUserResponse {
-    int id = 1;
+    int32 id = 1;
 }
 
 message GetUserRequest {
-    int id = 1;
+    int32 id = 1;
 }
 
 message GetUserResponse {

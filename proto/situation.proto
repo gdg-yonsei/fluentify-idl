@@ -1,0 +1,18 @@
+syntax = "proto3";
+package proto;
+import "sentence/sentence.proto";
+import "context/context.proto";
+option go_package = "proto/situation";
+
+//get
+message GetSituationRequest {
+    int32 id = 1;
+}
+
+message GetSituationResponse {
+    int32 id = 1;
+    string title = 2;
+    string thumbnail_url = 3;
+    repeated sentence.GetSentenceResponse sentences = 4;
+    repeated context.getContextResponse contexts = 5;
+}

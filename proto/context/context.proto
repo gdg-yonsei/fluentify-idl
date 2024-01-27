@@ -1,0 +1,15 @@
+syntax = "proto3";
+package context;
+
+option go_package = "proto/context/context";
+
+
+message getContextRequest {
+    int32 id = 1;
+}
+
+message getContextResponse {
+    int32 id = 1;
+    string text = 2;
+    string image_url = 3;
+}
