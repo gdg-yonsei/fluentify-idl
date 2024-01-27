@@ -14,16 +14,6 @@ enum DisorderType {
     DISORDER_TYPE_UNSPECIFIED = 0;
 }
 
-// message CreateUserRequest {
-//     string name = 1; 
-//     int age = 2;
-//     string disorderType = 3;
-// }
-
-// message CreateUserResponse {
-//     int id = 1;
-// }
-
 message GetUserRequest {
     string id = 1;
 }
