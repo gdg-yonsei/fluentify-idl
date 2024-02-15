@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package proto;
+
+// information for articulation practice
+message ContextDTO {
+    int32 id = 1;
+    string image_url = 2;
+}
+
+message GetContextRequest {
+    int32 id = 1;
+}
+
+message GetContextResponse {
+    ContextDTO context = 1;
+}
+
+message ArticulationFeeback {
+    int32 context_id = 1;
+    string overall_feedback = 5;
+}
+
+message GetArticulationFeedbackRequest {
+    int32 context_id = 1;
+}
+
+message GetArticulationFeedbackResponse {
+    ArticulationFeeback articulation_feedback = 1;
+}

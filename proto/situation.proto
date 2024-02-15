@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package proto;
+
+import "articulation.proto";
+import "pronunciation.proto";
+
+// situation used to select the theme of the session
+message SituationDTO {
+    int32 id = 1;
+    string title = 2;
+    string thumbnail_url = 3;
+    repeated SentenceDTO sentences = 4; 
+    repeated ContextDTO contexts = 5;
+}
+
+message ListSituationsRequest {
+    // empty
+}
+
+message ListSituationsResponse {
+    repeated SituationDTO situations = 1;    
+}
+
+message GetSituationRequest {
+    int32 id = 1;
+}
+
+message GetSituationResponse {
+    SituationDTO situation = 1;
+}

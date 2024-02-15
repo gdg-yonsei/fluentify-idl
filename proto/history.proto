@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package proto;
+
+import "articulation.proto";
+import "pronunciation.proto";
+
+enum HistoryType {
+    UNKNOWN = 0;
+    PRONUNCIATION = 1;
+    ARTICULATION = 2;
+}
+
+message FeebackHistoryDTO {
+    HistoryType type = 1;
+    oneof feeback {
+        PronunciationFeedbackDTO pronunciation = 2;
+        ArticulationFeedbackDTO articulation = 3;
+    }
+}
+
+message ListHistoriesRequest {
+    optional HistoryType type = 1;
+}
+
+message ListHistoriesResponse {
+    repeated FeebackHistoryDTO histories = 1;
+}
