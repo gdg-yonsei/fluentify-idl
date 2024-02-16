@@ -6,9 +6,9 @@ import "articulation.proto";
 import "pronunciation.proto";
 
 enum HistoryType {
-    UNKNOWN = 0;
-    PRONUNCIATION = 1;
-    ARTICULATION = 2;
+    HISTORY_TYPE_UNSPECIFIED = 0;
+    HISTORY_TYPE_PRONUNCIATION = 1;
+    HISTORY_TYPE_ARTICULATION = 2;
 }
 
 message FeebackHistoryDTO {

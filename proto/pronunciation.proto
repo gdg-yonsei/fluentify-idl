@@ -16,7 +16,7 @@ message GetSetenceResponse {
     SentenceDTO sentence = 1;
 }
 
-message PronunciationFeeback {
+message PronunciationFeedbackDTO {
     int32 sentence_id = 1;
     repeated int32 incorrect_indexes = 2;
     int32 pronunciation_score = 3;
@@ -31,5 +31,5 @@ message GetPronunciationFeebackRequest {
 }
 
 message SubmitPronunciationResponse {
-    PronunciationFeeback pronunciation_feeback = 1;
+    PronunciationFeedbackDTO pronunciation_feeback = 1;
 }
