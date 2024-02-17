@@ -4,12 +4,12 @@ package proto;
 
 // sentence which user has to try to pronounce
 message SentenceDTO {
-    int32 id = 1;
+    string id = 1;
     string text = 2;
 }
 
 message GetSetenceRequest {
-    int32 id = 1;
+    string id = 1;
 }
 
 message GetSetenceResponse {

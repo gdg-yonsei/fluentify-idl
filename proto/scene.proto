@@ -4,13 +4,13 @@ package proto;
 
 // information for sentence formation practice
 message SceneDTO {
-    int32 id = 1;
+    string id = 1;
     string image_url = 2;
     string question = 3;
 }
 
 message GetSceneRequest {
-    int32 id = 1;
+    string id = 1;
 }
 
 message GetSceneResponse {
