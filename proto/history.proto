@@ -7,14 +7,14 @@ import "feedback.proto";
 enum HistoryType {
     HISTORY_TYPE_UNSPECIFIED = 0;
     HISTORY_TYPE_PRONUNCIATION = 1;
-    HISTORY_TYPE_ARTICULATION = 2;
+    HISTORY_TYPE_COMMUNICATION = 2;
 }
 
 message FeebackHistoryDTO {
     HistoryType type = 1;
     oneof feeback {
         PronunciationFeedbackDTO pronunciation = 2;
-        ArticulationFeedbackDTO articulation = 3;
+        CommunicationFeedbackDTO communication = 3;
     }
 }
 
