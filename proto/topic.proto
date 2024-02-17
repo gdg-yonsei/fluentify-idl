@@ -2,16 +2,13 @@ syntax = "proto3";
 
 package proto;
 
-import "articulation.proto";
-import "pronunciation.proto";
-
 // topic used to select the theme of the session
 message TopicDTO {
     int32 id = 1;
     string title = 2;
     string thumbnail_url = 3;
-    repeated SentenceDTO sentences = 4; 
-    repeated SceneDTO scenes = 5;
+    repeated string sentence_ids = 4;
+    repeated string scene_ids = 5;
 }
 
 message ListTopicsRequest {

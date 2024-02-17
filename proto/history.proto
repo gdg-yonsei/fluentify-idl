@@ -2,8 +2,7 @@ syntax = "proto3";
 
 package proto;
 
-import "articulation.proto";
-import "pronunciation.proto";
+import "feedback.proto";
 
 enum HistoryType {
     HISTORY_TYPE_UNSPECIFIED = 0;

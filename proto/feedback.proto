@@ -2,20 +2,6 @@ syntax = "proto3";
 
 package proto;
 
-// sentence which user has to try to pronounce
-message SentenceDTO {
-    int32 id = 1;
-    string text = 2;
-}
-
-message GetSetenceRequest {
-    int32 id = 1;
-}
-
-message GetSetenceResponse {
-    SentenceDTO sentence = 1;
-}
-
 message PronunciationFeedbackDTO {
     int32 sentence_id = 1;
     repeated int32 incorrect_indexes = 2;
@@ -30,6 +16,20 @@ message GetPronunciationFeebackRequest {
     string audio_file_url = 2;
 }
 
-message SubmitPronunciationResponse {
+message GetPronunciationResponse {
     PronunciationFeedbackDTO pronunciation_feeback = 1;
+}
+
+message CommunicationFeedbackDTO {
+    int32 scene_id = 1;
+    string overall_feedback = 5;
+}
+
+message GetCommunicationFeedbackRequest {
+    int32 scene_id = 1;
+    string audio_file_url = 2;
+}
+
+message GetCommunicationFeedbackResponse {
+    CommunicationFeedbackDTO communication_feedback = 1;
 }
