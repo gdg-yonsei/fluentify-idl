@@ -11,12 +11,18 @@ message TopicDTO {
     repeated string scene_ids = 5;
 }
 
+message CompactTopicDTO {
+    string id = 1;
+    string title = 2;
+    string thumbnail_url = 3;
+}
+
 message ListTopicsRequest {
     // empty
 }
 
 message ListTopicsResponse {
-    repeated TopicDTO topics = 1;    
+    repeated CompactTopicDTO topics = 1;
 }
 
 message GetTopicRequest {
