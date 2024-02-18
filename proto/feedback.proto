@@ -22,7 +22,7 @@ message GetPronunciationFeedbackResponse {
 
 message CommunicationFeedbackDTO {
     string scene_id = 1;
-    string overall_feedback = 5;
+    string overall_feedback = 2;
 }
 
 message GetCommunicationFeedbackRequest {
