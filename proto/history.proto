@@ -10,9 +10,9 @@ enum HistoryType {
     HISTORY_TYPE_COMMUNICATION = 2;
 }
 
-message FeebackHistoryDTO {
+message FeedbackHistoryDTO {
     HistoryType type = 1;
-    oneof feeback {
+    oneof feedback {
         PronunciationFeedbackDTO pronunciation = 2;
         CommunicationFeedbackDTO communication = 3;
     }
@@ -23,5 +23,5 @@ message ListHistoriesRequest {
 }
 
 message ListHistoriesResponse {
-    repeated FeebackHistoryDTO histories = 1;
+    repeated FeedbackHistoryDTO histories = 1;
 }
