@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package proto;
+
+message PronunciationFeedbackDTO {
+    string sentence_id = 1;
+    repeated int32 incorrect_indexes = 2;
+    int32 pronunciation_score = 3;
+    int32 volume_score = 4;
+    int32 speed_score = 5;
+    string overall_feedback = 6;
+}
+
+message GetPronunciationFeedbackRequest {
+    string sentence_id = 1;
+    string audio_file_url = 2;
+}
+
+message GetPronunciationFeedbackResponse {
+    PronunciationFeedbackDTO pronunciation_feeback = 1;
+}
+
+message CommunicationFeedbackDTO {
+    string scene_id = 1;
+    string overall_feedback = 2;
+}
+
+message GetCommunicationFeedbackRequest {
+    string scene_id = 1;
+    string audio_file_url = 2;
+}
+
+message GetCommunicationFeedbackResponse {
+    CommunicationFeedbackDTO communication_feedback = 1;
+}

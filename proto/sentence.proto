@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+// sentence which user has to try to pronounce
+message SentenceDTO {
+    string id = 1;
+    string text = 2;
+}
+
+message GetSetenceRequest {
+    string id = 1;
+}
+
+message GetSetenceResponse {
+    SentenceDTO sentence = 1;
+}

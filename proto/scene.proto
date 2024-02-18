@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package proto;
+
+// information for sentence formation practice
+message SceneDTO {
+    string id = 1;
+    string image_url = 2;
+    string question = 3;
+}
+
+message GetSceneRequest {
+    string id = 1;
+}
+
+message GetSceneResponse {
+    SceneDTO scene = 1;
+}
