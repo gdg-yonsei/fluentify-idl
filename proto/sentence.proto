@@ -8,10 +8,10 @@ message SentenceDTO {
     string text = 2;
 }
 
-message GetSetenceRequest {
+message GetSentenceRequest {
     string id = 1;
 }
 
-message GetSetenceResponse {
+message GetSentenceResponse {
     SentenceDTO sentence = 1;
 }
