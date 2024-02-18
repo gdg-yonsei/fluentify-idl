@@ -11,12 +11,12 @@ message PronunciationFeedbackDTO {
     string overall_feedback = 6;
 }
 
-message GetPronunciationFeebackRequest {
+message GetPronunciationFeedbackRequest {
     string sentence_id = 1;
     string audio_file_url = 2;
 }
 
-message GetPronunciationResponse {
+message GetPronunciationFeedbackResponse {
     PronunciationFeedbackDTO pronunciation_feeback = 1;
 }
 
