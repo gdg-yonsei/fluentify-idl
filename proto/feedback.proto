@@ -17,7 +17,7 @@ message GetPronunciationFeedbackRequest {
 }
 
 message GetPronunciationFeedbackResponse {
-    PronunciationFeedbackDTO pronunciation_feeback = 1;
+    PronunciationFeedbackDTO pronunciation_feedback = 1;
 }
 
 message CommunicationFeedbackDTO {
