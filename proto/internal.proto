@@ -2,14 +2,41 @@ syntax = "proto3";
 
 package proto;
 
-message HelloRequest {
-  string name = 1;
+message PronunciationFeedbackRequest {
+  string sentence = 1;
+  string audio_path = 2;
+  string tip = 3;
 }
 
-message HelloResponse {
-  string message = 1;
+message PronunciationFeedbackResponse {
+  string transcript = 1;
+  repeated int32 wrong_idx_major = 2;
+  repeated int32 wrong_idx_minor = 3;
+  double pronunciation_score = 4;
+  double decibel = 5;
+  double speech_rate = 6;
+  string positive_feedback = 7;
+  string negative_feedback = 8;
 }
 
-service HelloService {
-  rpc Hello(HelloRequest) returns (HelloResponse);
+service PronunciationFeedbackService {
+  rpc PronunciationFeedback(PronunciationFeedbackRequest) returns (PronunciationFeedbackResponse);
+}
+
+message CommunicationFeedbackRequest {
+  string context = 1;
+  string question = 2;
+  string expected_answer = 3;
+  string audio_path = 4;
+  string img_path = 5;
+}
+
+message CommunicationFeedbackResponse {
+  string positive_feedback = 1;
+  string negative_feedback = 2;
+  string enhanced_answer = 3;
+}
+
+service CommunicationFeedbackService {
+  rpc CommunicationFeedback(CommunicationFeedbackRequest) returns (CommunicationFeedbackResponse);
 }
