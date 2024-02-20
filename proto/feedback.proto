@@ -4,11 +4,12 @@ package proto;
 
 message PronunciationFeedbackDTO {
     string sentence_id = 1;
-    repeated int32 incorrect_indexes = 2;
-    int32 pronunciation_score = 3;
-    int32 volume_score = 4;
-    int32 speed_score = 5;
-    string overall_feedback = 6;
+    string transcript = 2; // stt 가 인식한 문장
+    repeated int32 incorrect_indexes = 3;
+    int32 pronunciation_score = 4;
+    int32 volume_score = 5;
+    int32 speed_score = 6;
+    string overall_feedback = 7;
 }
 
 message GetPronunciationFeedbackRequest {
