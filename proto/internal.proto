@@ -10,13 +10,12 @@ message PronunciationFeedbackRequest {
 
 message PronunciationFeedbackResponse {
   string transcript = 1;
-  repeated int32 wrong_idx_major = 2;
-  repeated int32 wrong_idx_minor = 3;
-  double pronunciation_score = 4;
-  double decibel = 5;
-  double speech_rate = 6;
-  string positive_feedback = 7;
-  string negative_feedback = 8;
+  repeated int32 incorrect_indexes = 2;
+  double pronunciation_score = 3;
+  double decibel = 4;
+  double speech_rate = 5;
+  string positive_feedback = 6;
+  string negative_feedback = 7;
 }
 
 service PronunciationFeedbackService {
