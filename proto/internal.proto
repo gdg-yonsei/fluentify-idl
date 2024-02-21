@@ -11,9 +11,9 @@ message PronunciationFeedbackRequest {
 message PronunciationFeedbackResponse {
   string transcript = 1;
   repeated int32 incorrect_indexes = 2;
-  double pronunciation_score = 3;
-  double decibel = 4;
-  double speech_rate = 5;
+  int32 pronunciation_score = 3;
+  int32 volume_score = 4;
+  int32 speed_score = 5;
   string positive_feedback = 6;
   string negative_feedback = 7;
 }

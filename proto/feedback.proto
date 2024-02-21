@@ -9,7 +9,8 @@ message PronunciationFeedbackDTO {
     int32 pronunciation_score = 4;
     int32 volume_score = 5;
     int32 speed_score = 6;
-    string overall_feedback = 7;
+    string positive_feedback = 7;
+    string negative_feedback = 8;
 }
 
 message GetPronunciationFeedbackRequest {
@@ -23,7 +24,9 @@ message GetPronunciationFeedbackResponse {
 
 message CommunicationFeedbackDTO {
     string scene_id = 1;
-    string overall_feedback = 2;
+    string positive_feedback = 2;
+    string negative_feedback = 3;
+    string enhanced_answer = 4;
 }
 
 message GetCommunicationFeedbackRequest {
